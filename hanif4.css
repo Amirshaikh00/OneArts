@@ -25,7 +25,7 @@ body {
 }
 
 .site-header {
-    max-width: 100px;   /* increase width */
+    max-width: 1200px;;   /* increase width */
     width: 100%;
     margin: 16px auto;
     padding: 18px 24px;
@@ -220,6 +220,7 @@ body {
         margin: 0 auto;
     }
 }
+
 
 
 
