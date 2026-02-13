@@ -1,0 +1,203 @@
+/* Import modern Google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-image: url("Background.jpg"); /* put your resin photo file name here */
+    background-size: cover;        /* makes image fill the screen */
+    background-position: center;   /* keeps image centered */
+    background-repeat: no-repeat;  /* prevents repeating */
+    background-attachment: fixed;  /* creates nice scrolling effect */
+    margin: 20px;
+}
+
+.site-header {
+    max-width: 1200px;   /* increase width */
+    width: 100%;
+    margin: 16px auto;
+    padding: 18px 24px;
+    text-align: center;
+
+    background: linear-gradient(90deg, #e0f7fa, #fff0f6);
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+/* TAGLINE */
+.tagline {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    font-weight: 500;
+
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.header-line {
+    width: 60px;
+    height: 3px;
+    margin: 6px auto 10px;
+    background: linear-gradient(90deg, #ff4da6, #2cd1ff);
+    border-radius: 5px;
+
+    animation: lineGlow 3s ease-in-out infinite;
+}
+
+@keyframes lineGlow {
+    0%   { opacity: 0.6; }
+    50%  { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+
+/* Page title */
+.main-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+
+    /* gradient */
+    background: linear-gradient(90deg, #2cd1ff, #ff4da6, #00c6ff);
+    background-size: 300% 300%;
+
+    /* IMPORTANT for gradient text */
+    color: transparent;                 /* fallback */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientMove 6s ease infinite, fadeSlide 1s ease forwards;
+    margin-bottom: 10px;
+}
+
+
+/* Products layout */
+.products {
+      display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* FORCE 3 per row */
+    gap: 30px;                              /* proper spacing */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Product card */
+.product {
+    background-color: white;
+    border-radius: 14px;
+    width: 260px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    height: 350px;
+}
+
+/* Hover effect */
+.product:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* Product image */
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Product title */
+.product h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #6a1b9a;
+    margin: 12px 0 6px;
+}
+
+/* Product description */
+.product p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Price styling */
+.price {
+    color: #0a8f2d;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+/* Contact section */
+.contact {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Contact links */
+.contact a {
+    text-decoration: none;
+    color: #0d0505;
+    font-weight: 600;
+    margin: 0 8px;
+    transition: color 0.2s ease;
+}
+
+.contact a:hover {
+    color: #4b0082;
+}
+
+/* Gradient moving animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Fade + slide animation */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glow effect when hovering title */
+.main-title:hover {
+    text-shadow: 0 0 10px rgba(123, 44, 255, 0.6),
+                 0 0 20px rgba(255, 77, 166, 0.5),
+                 0 0 30px rgba(0, 198, 255, 0.5);
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+@media (max-width: 900px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .products {
+        grid-template-columns: 1fr; /* 1 per row */
+    }
+}
