@@ -21,6 +21,7 @@ body {
     background: linear-gradient(90deg, #e0f7fa, #fff0f6);
     border-radius: 16px;
     box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+    box-sizing: border-box;
 }
 
 /* TAGLINE */
@@ -205,3 +206,4 @@ body {
     }
 
 }
+
