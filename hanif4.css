@@ -1,31 +1,20 @@
 /* Import modern Google font */
-* {
-    box-sizing: border-box;
-}
-html, body {
-    width: 100%;
-    overflow-x: hidden;
-}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
-    margin: 0;
     font-family: 'Poppins', Arial, sans-serif;
-    background-image: url("Background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-image: url("Background.jpg"); /* put your resin photo file name here */
+    background-size: cover;        /* makes image fill the screen */
+    background-position: center;   /* keeps image centered */
+    background-repeat: no-repeat;  /* prevents repeating */
+    background-attachment: fixed;  /* creates nice scrolling effect */
+    margin: 20px;
 }
 
-.page-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
+
 
 .site-header {
-    max-width: 1200px;;   /* increase width */
+    max-width: 1200px;   /* increase width */
     width: 100%;
     margin: 16px auto;
     padding: 18px 24px;
@@ -34,6 +23,7 @@ body {
     background: linear-gradient(90deg, #e0f7fa, #fff0f6);
     border-radius: 16px;
     box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+     box-sizing: border-box;
 }
 
 /* TAGLINE */
@@ -203,26 +193,14 @@ body {
     transition: 0.3s ease;
 }
 
-@media (max-width: 600px) {
-    .site-header {
-        padding: 16px;
-    }
-
-    .main-title {
-        font-size: 36px;
-    }
-
-    .tagline {
-        font-size: 16px;
-        line-height: 1.4;
+@media (max-width: 900px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row */
     }
 }
 
-
-
-
-
-
-
-
-
+@media (max-width: 600px) {
+    .products {
+        grid-template-columns: 1fr; /* 1 per row */
+    }
+}
