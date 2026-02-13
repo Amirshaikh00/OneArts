@@ -84,13 +84,17 @@ body {
 
 
 /* Products layout */
-.products {
-      display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* FORCE 3 per row */
-    gap: 30px;                              /* proper spacing */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+.product {
+    background-color: white;
+    border-radius: 14px;
+    width: 100%;              /* IMPORTANT */
+    max-width: 260px;         /* keeps laptop look */
+    margin: 0 auto;           /* centers on mobile */
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    height: 350px;
 }
 
 /* Product card */
@@ -200,4 +204,5 @@ body {
     .products {
         grid-template-columns: 1fr; /* 1 per row */
     }
+
 }
