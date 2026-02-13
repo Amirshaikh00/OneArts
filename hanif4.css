@@ -15,7 +15,9 @@ body {
     background-position: center;   /* keeps image centered */
     background-repeat: no-repeat;  /* prevents repeating */
     background-attachment: fixed;  /* creates nice scrolling effect */
-    margin: 20px;
+    scrollbar-gutter: stable;  /* PREVENTS layout jump */
+    margin: 0px;
+     padding: 20px;  
 }
 
 .site-header {
@@ -28,9 +30,6 @@ body {
     background: linear-gradient(90deg, #e0f7fa, #fff0f6);
     border-radius: 16px;
     box-shadow: 0 6px 16px rgba(0,0,0,0.18);
-     box-sizing: border-box;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* TAGLINE */
@@ -211,5 +210,6 @@ body {
         grid-template-columns: 1fr; /* 1 per row */
     }
 }
+
 
 
