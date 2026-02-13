@@ -203,24 +203,20 @@ body {
     transition: 0.3s ease;
 }
 
-@media (max-width: 900px) {
-    .products {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
 @media (max-width: 600px) {
-    .products {
-        grid-template-columns: minmax(0, 1fr);
+    .site-header {
+        padding: 16px;
     }
 
-    .product {
-        width: 100%;
-        max-width: 320px;
-        margin: 0 auto;
+    .main-title {
+        font-size: 36px;
+    }
+
+    .tagline {
+        font-size: 16px;
+        line-height: 1.4;
     }
 }
-
 
 
 
