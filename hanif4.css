@@ -22,6 +22,8 @@ body {
     border-radius: 16px;
     box-shadow: 0 6px 16px rgba(0,0,0,0.18);
      box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* TAGLINE */
@@ -202,3 +204,4 @@ body {
         grid-template-columns: 1fr; /* 1 per row */
     }
 }
+
