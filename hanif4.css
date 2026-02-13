@@ -1,4 +1,11 @@
 /* Import modern Google font */
+* {
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
@@ -204,4 +211,5 @@ body {
         grid-template-columns: 1fr; /* 1 per row */
     }
 }
+
 
