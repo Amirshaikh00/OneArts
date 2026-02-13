@@ -9,15 +9,19 @@ html, body {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
+    margin: 0;
     font-family: 'Poppins', Arial, sans-serif;
-    background-image: url("Background.jpg"); /* put your resin photo file name here */
-    background-size: cover;        /* makes image fill the screen */
-    background-position: center;   /* keeps image centered */
-    background-repeat: no-repeat;  /* prevents repeating */
-    background-attachment: fixed;  /* creates nice scrolling effect */
-    scrollbar-gutter: stable;  /* PREVENTS layout jump */
-    margin: 0px;
-     padding: 20px;  
+    background-image: url("Background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .site-header {
@@ -210,6 +214,7 @@ body {
         grid-template-columns: 1fr; /* 1 per row */
     }
 }
+
 
 
 
